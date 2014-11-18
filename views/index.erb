@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RACG</title>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+</head>
+
+<style>
+  .container {
+    margin: 2em;
+  }
+</style>
+<body>
+
+<div class="container">
+  
+
+<div class="pure-g">
+<div class="pure-u-1-1">
+  
+<form action="http://localhost:4567/report" method="GET" class="pure-form pure-form-stacked">
+  <fieldset>
+  <legend>Risk Assessment Cover Generator</legend>
+
+  <label for="title">Cover Title</label>
+  <input type="text" name="title" /> 
+  
+  <label for="month">Month</label>
+  <select name="month">
+    <option value="Jan">January</option>
+    <option value="Feb">February</option>
+    <option value="Mar">March</option>
+    <option value="Apr">April</option>
+    <option value="May">May</option>
+    <option value="Jun">June</option>
+    <option value="Jul">July</option>
+    <option value="Aug">August</option>
+    <option value="Sep">September</option>
+    <option value="Oct">October</option>
+    <option value="Nov">November</option>
+    <option value="Dec">December</option>
+  </select>
+
+  <label for="year">Year</label>
+  <select name="year">
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+  </select>
+  
+  <button type="submit" class="pure-button pure-button-primary">Generate</button>
+  </fieldset> 
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
+
