@@ -8,9 +8,11 @@ end
 get '/report' do 
   content_type 'application/pdf'
 
+  reptype = params[:covertype]
   repname = params[:title]
   repmonth = params[:month]
   repyear = params[:year]
+
 
   pdf = Prawn::Document.new
       #header
@@ -19,7 +21,7 @@ get '/report' do
 
       #production risk summary
       pdf.font "public/assets/Arial Black.ttf"
-      pdf.text "PRODUCTION RISK SUMMARY", align: :center, size: 28
+      pdf.text params[:covertype], align: :center, size: 28
       pdf.move_down 40
 
       #report title
